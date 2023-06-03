@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Add hiking</title>
+
+    <link rel="icon" href="img/Fevicon.png" type="image/png">
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<section class="login_box_area section-margin">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="login_form_inner register_form_inner">
+                    <h3>Add Hiking</h3>
+                    <form th:object="${hikingDTO}" class="row login_form" action="/addHiking" method="post" id="register_form" enctype="multipart/form-data" >
+                        <div class="col-md-12 form-group">
+                            <input th:field="*{title}" type="text" class="form-control" id="title" name="title" placeholder="Title Hiking" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title Hiking'" />
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input th:field="*{description}" type="text" class="form-control" id="description" name="description" placeholder="Description" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Description'">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input th:field="*{location}" type="text" class="form-control" id="location" name="location" placeholder="Location" onfocus="this.placeholder = ''" onblur="this.placeholder = 'location'">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input th:field="*{date}" type="text" class="form-control" id="date" name="date" placeholder="Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date'">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="file" class="form-control" id="productImg" name="productImg" >
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <button type="submit" value="submit" class="button button-register w-100">Add Hiking</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="vendors/skrollr.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+<script src="vendors/jquery.ajaxchimp.min.js"></script>
+<script src="vendors/mail-script.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
